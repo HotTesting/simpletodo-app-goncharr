@@ -19,10 +19,10 @@ let list = element.all(by.className('Started'));
         browser.get(URL);
         expect(browser.getTitle()).toBe('Angular2 Seed');
         allcheckboxes.get(0).click();
-        expect(list.get(0).getText()).not.toBe('Read Parenting Books :)');
+        expect(list.get(0).getText()).not.toContain('Read Parenting Books :)');
     })
 
-     it('delete task', function () {
+     it('delete all tasks', function () {
         browser.get(URL);
         expect(browser.getTitle()).toBe('Angular2 Seed');
         allcheckboxes.click();
